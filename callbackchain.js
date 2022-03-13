@@ -24,3 +24,5 @@ const printHistoryDetails = (historyDetails)=>{console.log(historyDetails)}
 const getCallHistory= (phoneDetails)  => { getCallHistoryUsingPhoneAPI(phoneDetails,printHistoryDetails)}
 
 getCallHistoryUsingNameAPI('Mufeez',getCallHistory);
+
+//getCallHistoryUsingNameAPI ->phonenumber after 2 second-> getCallHistory(phonenumber)->getCallHistoryUsingPhoneAPI->history after 2 seconds->printHistoryDetails(history)
