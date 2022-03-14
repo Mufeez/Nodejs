@@ -1,4 +1,4 @@
-function getCallHistoryUsingNameAPI(name) {
+function getPhoneNumberUsingNameAPI(name) {
   // consider that API takes about 2 second to respond
   return new Promise((resolve, reject) => {
     setTimeout(() => {
@@ -32,7 +32,7 @@ function getCallHistoryUsingPhoneAPI(phoneNum) {
   });
 }
 
-getCallHistoryUsingNameAPI("Mufeez").then((phone) => {
+getPhoneNumberUsingNameAPI("Mufeez").then((phone) => {
   getCallHistoryUsingPhoneAPI(phone).then((history) => {
     console.log(history);
   });
