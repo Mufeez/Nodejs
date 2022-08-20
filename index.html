@@ -1,0 +1,46 @@
+<html>
+  <head>
+    <script>
+      // html markup is used to specify boundriees and placement of each element
+      // CSS Provides styling to the elements
+      // Javascript Defines Behaviour
+      function turnOnLight() {
+        if (document.getElementById("light").innerText === "light off") {
+          document.getElementById("light").innerText = "light on";
+        } else {
+          document.getElementById("light").innerText = "light off";
+        }
+      }
+    </script>
+    <style>
+        .room
+        {
+            color:green
+        }
+        .sitout
+        {
+            color:red
+        }
+        .kitchen
+        {
+            color:blue
+        }
+    </style>
+  </head>
+
+  <body>
+    <div class="room">
+      <h1>Biggest Room</h1>
+    </div>
+    <div class="sitout">
+      <h2>Sit Out</h2>
+    </div>
+    <div class="kitchen">
+      <p>Kitchen</p>
+      <span>light off</span>
+      <br>
+      <button onclick="turnOnLight()">Electric Button</button>
+    
+    </div>
+  </body>
+</html>
