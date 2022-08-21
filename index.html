@@ -6,52 +6,46 @@
       // Javascript Defines Behaviour
       //buld has two satets on/off
       //bulb state will be handled by clicking behavior on electric button
-      function turnOnLight() {
-        if (document.getElementById("light").innerText === "light off") {
-          document.getElementById("light").innerText = "light on";
-        } else {
-          document.getElementById("light").innerText = "light off";
-        }
-      }
 
       function changeLightState() {
-  var image = document.getElementById('myImage');
-  if (image.src.match("bulbon")) {
-    image.src = "https://www.w3schools.com/js/pic_bulboff.gif";
-  } else {
-    image.src = "https://www.w3schools.com/js/pic_bulbon.gif";
-  }
-}
+        let image = document.getElementById("myImage");
+        if (image.src.match("bulbon")) {
+          image.src = "https://www.w3schools.com/js/pic_bulboff.gif";
+        } else {
+          image.src = "https://www.w3schools.com/js/pic_bulbon.gif";
+        }
+      }
     </script>
     <style>
-        .room
-        {
-            color:green
-        }
-        .sitout
-        {
-            color:red
-        }
-        .kitchen
-        {
-            color:blue
-        }
+      .room {
+        color: green;
+      }
+      .sitout {
+        color: red;
+      }
+      .kitchen {
+        color: blue;
+      }
     </style>
   </head>
 
   <body>
     <div class="room">
-      <h1>Biggest Room</h1>
+      <h1>Room</h1>
     </div>
     <div class="sitout">
       <h2>Sit Out</h2>
     </div>
     <div class="kitchen">
       <p>Kitchen</p>
-      <img id="myImage" src="https://www.w3schools.com/js/pic_bulboff.gif" width="100" height="180">
-      <br>
+      <img
+        id="myImage"
+        src="https://www.w3schools.com/js/pic_bulboff.gif"
+        width="100"
+        height="180"
+      />
+      <br />
       <button onclick="changeLightState()">Electric Button</button>
-    
     </div>
   </body>
 </html>
