@@ -11,6 +11,15 @@
           document.getElementById("light").innerText = "light off";
         }
       }
+
+      function changeLightState() {
+  var image = document.getElementById('myImage');
+  if (image.src.match("bulbon")) {
+    image.src = "https://www.w3schools.com/js/pic_bulboff.gif";
+  } else {
+    image.src = "https://www.w3schools.com/js/pic_bulbon.gif";
+  }
+}
     </script>
     <style>
         .room
@@ -37,9 +46,9 @@
     </div>
     <div class="kitchen">
       <p>Kitchen</p>
-      <span>light off</span>
+      <img id="myImage" src="https://www.w3schools.com/js/pic_bulboff.gif" width="100" height="180">
       <br>
-      <button onclick="turnOnLight()">Electric Button</button>
+      <button onclick="changeLightState()">Electric Button</button>
     
     </div>
   </body>
