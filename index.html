@@ -3,12 +3,20 @@
     <script>
       // html markup is used to specify boundriees and placement of each element
       // CSS Provides styling to the elements
-      // Javascript Defines Behaviour
-      //buld has two satets on/off
-      //bulb state will be handled by clicking behavior on electric button
+      // Javascript Defines Behaviour for events in the form of fucntions 
+      // like what should happen on click event of electric button
+      // on click event Javascript using function will toggle bulb state from on to off and off to on 
+      // bulb has two states on/off
+      // bulb state will be handled by click events on electric button
+      // Following Analogy will help you Understand Better
+      // document = house
+      // Javascript = Mother in the House
+      // Divs = different areas in the House
+      // Tags = different element in the house
+      // Style = Painting of the House
 
       function changeLightState() {
-        let image = document.getElementById("myImage");
+        let image = document.getElementById("bulb");
         if (image.src.match("bulbon")) {
           image.src = "https://www.w3schools.com/js/pic_bulboff.gif";
         } else {
@@ -17,7 +25,7 @@
       }
     </script>
     <style>
-      .room {
+      .livingArea {
         color: green;
       }
       .sitout {
@@ -30,22 +38,24 @@
   </head>
 
   <body>
-    <div class="room">
-      <h1>Room</h1>
+    <div class="livingArea">
+      <h1>Room 1</h1>
+      <h2>Room 2</h2>
     </div>
+    <div class="kitchen">
+        <p>Kitchen</p>
+        <img
+          id="bulb"
+          src="https://www.w3schools.com/js/pic_bulboff.gif"
+          width="100"
+          height="180"
+        />
+        <br />
+        <button onclick="changeLightState()">Electric Button</button>
+      </div>
     <div class="sitout">
       <h2>Sit Out</h2>
     </div>
-    <div class="kitchen">
-      <p>Kitchen</p>
-      <img
-        id="myImage"
-        src="https://www.w3schools.com/js/pic_bulboff.gif"
-        width="100"
-        height="180"
-      />
-      <br />
-      <button onclick="changeLightState()">Electric Button</button>
-    </div>
+   
   </body>
 </html>
